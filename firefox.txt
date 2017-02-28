@@ -1,0 +1,12 @@
+* b6216f499431 Switch to firefox
+* e59e756d928e Switch to firefox
+* 470b80aa0652 Switch to firefox
+* fd7b6e5db0c5 Switch to firefox dev edition
+* 922a4544e9b3 Switch to firefox nightly
+* 8b344c8f37b0 Switch to firefox
+* f0b236420913 Switch to firefox
+* c5321fe59369 Switch back to firefox
+* f974551f8ab9 Switch to firefox
+* 42b8a2127cd8 Switch back to firefox
+* 54036f30373d Switch to firefox
+* f2f45a51b5a6 Switch to firefox
