@@ -86,4 +86,5 @@ axis.set(
     )
 fig.autofmt_xdate()
 fig.tight_layout()
+fig.savefig('browser-wars.png')
 plt.show()
