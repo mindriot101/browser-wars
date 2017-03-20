@@ -46,7 +46,7 @@ def extract_meta(browser):
         for line in infile:
             line = line.strip()
             words = line.split()
-            sha = words[1]
+            sha = words[0]
 
             yield extract_meta_from_sha(sha)
 

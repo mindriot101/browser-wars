@@ -1,7 +1,0 @@
-* 1f61f7c993f3 Use safari tech preview
-* 50a4f50ce7f3 Switch to safari
-* e4cbcb3213fe Switch to safari
-* 1e3ca3fa9e75 Switch to safari tech preview
-* f5f2c860c443 Switch to safari
-* 851231fc473d Switch to Safari
-* 6bff3d88d72c Switch to safari
