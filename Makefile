@@ -19,3 +19,5 @@ log.txt:
 
 clean:
 	@-rm -f chrome.txt firefox.txt safari.txt log.txt 2>/dev/null
+
+.PHONY: log.txt
