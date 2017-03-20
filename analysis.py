@@ -1,6 +1,8 @@
 #!/usr/bin/env python3.6
 
 
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import subprocess as sp
 import os
@@ -87,4 +89,3 @@ axis.set(
 fig.autofmt_xdate()
 fig.tight_layout()
 fig.savefig('browser-wars.png')
-plt.show()
