@@ -11,7 +11,7 @@ Code is kept in [`analysis.py`][2] and the results are shown below:
 
 ## Running
 
-To run the analysis, install the [requirements](#Requirements), and run `make`.
+To run the analysis, install the [requirements](#requirements), and run `make`.
 It is assumed that the dotfiles dir is in `${HOME}/dotfiles`. If this is not
 the case, run `make DOTFILES=<path>`.
 
