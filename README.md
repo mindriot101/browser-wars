@@ -9,6 +9,16 @@ Code is kept in [`analysis.py`][2] and the results are shown below:
 ![Results](browser-wars.png)
 
 
+## Running
+
+To run the analysis, install the [requirements](#Requirements), and run `make`.
+It is assumed that the dotfiles dir is in `${HOME}/dotfiles`. If this is not
+the case, run `make DOTFILES=<path>`.
+
+## Requirements
+
+* Python 3.6
+* `matplotlib`
 
 
 [1]: https://github.com/mindriot101/dotfiles
