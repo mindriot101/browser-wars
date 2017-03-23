@@ -7,6 +7,7 @@ I've started tracking when I change browsers through my [dotfiles][1] git histor
 Code is kept in [`analysis.py`][2] and the results are shown below:
 
 ![Results](browser-wars.png)
+![Results in bar chart form](browser-bars.png)
 
 
 ## Running
