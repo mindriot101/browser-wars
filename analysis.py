@@ -9,6 +9,8 @@ import os
 from contextlib import contextmanager
 import datetime
 
+plt.rc('figure', figsize=(11, 8))
+
 
 ROOT_DIR = os.path.expanduser(
     os.path.join('~', 'dotfiles')
@@ -93,7 +95,7 @@ def show_timeseries():
                 else:
                     raise ValueError('Should not reach here')
 
-    fig, axis = plt.subplots(figsize=(11, 8))
+    fig, axis = plt.subplots()
     axis.plot(all_dates, winning_browser, drawstyle='steps-mid')
     axis.grid(True)
     axis.set(
