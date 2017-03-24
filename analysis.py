@@ -138,5 +138,5 @@ def show_breakdown():
 
 
 
-# show_timeseries()
+show_timeseries()
 show_breakdown()
