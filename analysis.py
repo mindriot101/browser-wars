@@ -8,6 +8,7 @@ import subprocess as sp
 import os
 from contextlib import contextmanager
 import datetime
+from datetime import timezone
 
 plt.rc('figure', figsize=(11, 8))
 
@@ -95,6 +96,10 @@ def show_timeseries():
                 else:
                     raise ValueError('Should not reach here')
 
+    # Add on today
+    all_dates.append(datetime.datetime.now())
+    winning_browser.append(winning_browser[-1])
+
     fig, axis = plt.subplots()
     axis.plot(all_dates, winning_browser, drawstyle='steps-mid')
     axis.grid(True)
@@ -111,10 +116,12 @@ def show_timeseries():
 def show_breakdown():
     all_dates = sorted(list(extract_meta('log')), key=lambda row: row['date'])
     chrome_seconds, firefox_seconds, safari_seconds = 0, 0, 0
-    last = all_dates[0]['date']
+    first = all_dates[0]['date']
 
+    current_browser = None
     for entry in all_dates:
-        dt = (entry['date'] - last).seconds
+        dt = (entry['date'] - first).seconds
+        current_browser = entry['browser']
         if entry['browser'] == 'chrome':
             chrome_seconds += dt
         elif entry['browser'] == 'firefox':
@@ -123,6 +130,17 @@ def show_breakdown():
             safari_seconds += dt
         else:
             raise ValueError('Unexpected browser: {}'.format(entry['browser']))
+
+    # Add on today
+    print('Current browser should be: {}'.format(current_browser))
+    dt = (datetime.datetime.now(timezone.utc) - first).seconds
+
+    if current_browser == 'chrome':
+        chrome_seconds += dt
+    elif current_browser == 'firefox':
+        firefox_seconds += dt
+    elif current_browser == 'safari':
+        safari_seconds += dt
 
     fig, axis = plt.subplots()
     axis.bar([0, 1, 2], [chrome_seconds / 86400., firefox_seconds / 86400., safari_seconds / 86400.])
