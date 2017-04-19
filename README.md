@@ -9,6 +9,7 @@ Code is kept in [`analysis.py`][2] and the results are shown below:
 ![Results](browser-wars.png)
 ![Results in bar chart form](browser-bars.png)
 
+This should all be taken with a pinch of salt, as I started tracking my browser changes _well_ after I had used Chrome for years.
 
 ## Running
 
